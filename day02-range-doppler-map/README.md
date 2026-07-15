@@ -97,6 +97,9 @@ The 2D Range-Doppler plot displays the target peak at 50 m moving at $-19.78\tex
 > [!NOTE]
 > The prominent leakage-cross pattern centered on the target is expected spectral leakage due to rectangular windowing in the FFT processing, while the faint secondary artifact visible near Doppler bins +5 to +10 is an unexplained anomaly, suspected to be a dechirp mixing image artifact.
 
+> [!NOTE]
+> The solid dark blue band below ~10 m range is the result of the DC-leakage removal step (`mapMag(1:10,:) = 0`), which suppresses strong near-range leakage between the transmit and receive paths — a standard technique in real FMCW radar systems, not a plotting artifact.
+
 
 #### Signal Spectrum
 The spectrum showing the signal power and resolution:
