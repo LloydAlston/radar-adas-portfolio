@@ -94,6 +94,10 @@ Post-processing yields clear, high-resolution peaks in both range and velocity b
 The 2D Range-Doppler plot displays the target peak at 50 m moving at $-19.78\text{ m/s}$:
 ![Range Doppler Map](results/range_doppler.png)
 
+> [!NOTE]
+> The prominent leakage-cross pattern centered on the target is expected spectral leakage due to rectangular windowing in the FFT processing, while the faint secondary artifact visible near Doppler bins +5 to +10 is an unexplained anomaly, suspected to be a dechirp mixing image artifact.
+
+
 #### Signal Spectrum
 The spectrum showing the signal power and resolution:
 ![Spectrum](results/Spectrum.png)
