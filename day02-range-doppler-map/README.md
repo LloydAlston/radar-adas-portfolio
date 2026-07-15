@@ -102,16 +102,3 @@ The 2D Range-Doppler plot displays the target peak at 50 m moving at $-19.78\tex
 The spectrum showing the signal power and resolution:
 ![Spectrum](results/Spectrum.png)
 
----
-
-## Key Interview Highlights
-
-> [!IMPORTANT]
-> These are the exact, standard specifications that radar engineers and technical interviewers focus on:
-> * **Carrier Frequency**: $77 \text{ GHz}$ (Standard automotive radar band)
-> * **Bandwidth**: $150 \text{ MHz}$ (Yields range resolution $\Delta R = \frac{c}{2B} = 1 \text{ m}$)
-> * **Chirp Time**: $10\ \mu\text{s}$
-> * **Sampling Rate**: $200 \text{ MHz}$
-> * **Chirps per Frame**: $128$
-> * **Target Scenario**: $50 \text{ m}$ range, $-20 \text{ m/s}$ velocity
-> * **Accuracy**: Detected range of **$50.00\text{ m}$** and velocity of **$-19.78\text{ m/s}$** (slight quantization mismatch due to Doppler bin spacing)
