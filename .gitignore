@@ -1,3 +1,5 @@
 slprj/
 *.autosave
 *.asv
+*.slx.bak
+
