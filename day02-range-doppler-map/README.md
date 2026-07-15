@@ -4,7 +4,7 @@ A 77 GHz FMCW automotive radar was simulated in Simulink using a 150 MHz bandwid
 
 ---
 
-## 🛠️ Simulink Model & Architecture
+## Simulink Model & Architecture
 
 The radar system is modeled in Simulink to simulate the round-trip signal propagation and extract the raw beat frequency data (dechirped signal). 
 
@@ -23,7 +23,7 @@ Below is the Simulink block diagram layout:
 
 ---
 
-## ⚙️ Simulation Configuration & Parameters
+## Simulation Configuration & Parameters
 
 ### 1. FMCW Waveform Settings
 | Parameter | Value | Details |
@@ -54,7 +54,7 @@ Below is the Simulink block diagram layout:
 
 ---
 
-## 💻 MATLAB Post-Processing & 2D FFT
+## MATLAB Post-Processing & 2D FFT
 
 The 2D Range-Doppler Map (RDM) is computed using post-processing MATLAB scripts on the exported Simulink beat frames.
 
@@ -78,7 +78,7 @@ mapMag = abs(rangeDopplerMap);
 
 ---
 
-## 📊 Verification & Results
+## Verification & Results
 
 Post-processing yields clear, high-resolution peaks in both range and velocity bins.
 
@@ -104,7 +104,7 @@ The spectrum showing the signal power and resolution:
 
 ---
 
-## 💡 Key Interview Highlights
+## Key Interview Highlights
 
 > [!IMPORTANT]
 > These are the exact, standard specifications that radar engineers and technical interviewers focus on:

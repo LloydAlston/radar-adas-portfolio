@@ -4,7 +4,7 @@ This project implements a **77 GHz FMCW (Frequency-Modulated Continuous-Wave) Ra
 
 ---
 
-## 🛠️ System Architecture
+## System Architecture
 
 The simulator is built using Simulink blocks from the DSP System Toolbox and Phased Array System Toolbox. It models the signal generation, free space propagation, target reflection, dechirping, buffering, and spectral analysis.
 
@@ -15,7 +15,7 @@ Below is the layout of the Simulink model:
 
 ---
 
-## ⚙️ Configuration & Parameters
+## Configuration & Parameters
 
 The simulation parameters are configured as follows:
 
@@ -80,7 +80,7 @@ Because the Spectrum Analyzer is connected downstream of the Buffer, it automati
 
 ---
 
-## 💻 MATLAB Function Block: Peak Frequency Estimation
+## MATLAB Function Block: Peak Frequency Estimation
 
 To verify the range calculation programmatically, a **MATLAB Function** block is inserted between the Buffer and a Display block. It contains the following peak-frequency extraction code:
 
@@ -103,7 +103,7 @@ end
 
 ---
 
-## 📈 Theory & Mathematical Calculations
+## Theory & Mathematical Calculations
 
 ### 1. Round-Trip Time Delay ($\tau$)
 For a target at range $R = 50 \text{ m}$ propagating at speed $c = 3 \times 10^8 \text{ m/s}$:
@@ -127,7 +127,7 @@ $$\text{idx} = \frac{f_b}{\Delta f} + 1 = \frac{5,000,000}{100,000} + 1 = 51$$
 
 ---
 
-## 📊 Verification & Results
+## Verification & Results
 
 When the simulation runs, the Spectrum Analyzer displays a single sharp peak at **$5\text{ MHz}$**, representing the target at $50\text{ m}$.
 
