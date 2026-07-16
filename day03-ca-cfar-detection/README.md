@@ -88,9 +88,3 @@ An earlier run at the same -40 dB setting produced only 1 detection (a false ala
 
 - [cfar.m](file:///c:/Users/lloyd/radar-adas-portfolio/day03-ca-cfar-detection/scripts/cfar.m) — noise injection + range-Doppler processing + CFAR detection script
 - [fmcw_range_model.slx](file:///c:/Users/lloyd/radar-adas-portfolio/day03-ca-cfar-detection/scripts/fmcw_range_model.slx) — simulation model (no model changes from Day 2)
-
----
-
-## What's next
-
-[Project 04 — Angle of Arrival](../day04-angle-of-arrival): move from a single antenna to a uniform linear array (ULA) and estimate the target's bearing using beamforming, adding the third radar measurement dimension alongside range and velocity.
