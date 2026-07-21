@@ -2,7 +2,7 @@
 
 This project demonstrates the conversion of an FMCW (Frequency-Modulated Continuous Wave) radar range estimation algorithm from a MATLAB/Simulink development environment into deployable embedded C code using MathWorks **Embedded Coder** (R2024b).
 
-The generated C implementation was subsequently analysed with **Cppcheck** using MISRA C:2012 rules. After separating the production algorithm code from MathWorks runtime support files, the core radar implementation (`fmcw_range_model.c`) passed MISRA C:2012 analysis with **no reported violations**.
+The generated C implementation was subsequently analysed with **Cppcheck** using MISRA C:2012 rules. After separating the production algorithm code from MathWorks runtime support files, the core radar implementation (`fmcw_range_model.c`) achieved **zero reported MISRA C:2012 violations** using Cppcheck MISRA analysis.
 
 ---
 
@@ -13,8 +13,8 @@ The generated C implementation was subsequently analysed with **Cppcheck** using
 | Model name | `fmcw_range_model` |
 | Model version | 1.1 |
 | Simulink Coder | 24.2 (R2024b) |
-| Target selection | `ert.tlc` (Embedded Real-Time) |
-| Embedded hardware | ARM Compatible → ARM Cortex-M |
+| Target configuration | ERT (Embedded Real-Time) — generates embedded-style C without OS dependencies |
+| Deployment target | Generic ARM Cortex-M configuration (selected in Embedded Coder hardware settings; not implied by ERT alone) |
 | Code generated | Tue 21 Jul 2026 |
 
 ### Model Blocks
@@ -40,14 +40,14 @@ The generated code exposes three entry-point functions:
 /* Initialise all model states — call once before the control loop */
 void fmcw_range_model_initialize(void);
 
-/* Execute one base-rate time step (5 ns base rate, 3 task rates) */
+/* Execute one base-rate time step — simulation step configured at 5e-9 s; ECU task period mapped separately at deployment */
 void fmcw_range_model_step(void);
 
 /* Release resources — call on shutdown */
 void fmcw_range_model_terminate(void);
 ```
 
-The real-time model handle `fmcw_range_model_M` exposes an `errorStatus` field for overrun detection. `ert_main.c` provides a minimal integration harness showing how to wire `rt_OneStep()` to a hardware timer or interrupt service routine on the target MCU.
+The real-time model handle `fmcw_range_model_M` exposes an `errorStatus` field for overrun detection. `ert_main.c` provides a desktop execution harness illustrating the call sequence (`initialize` → `step` → `terminate`) that would later be replaced by ECU scheduler/RTOS task integration.
 
 ---
 
@@ -66,10 +66,10 @@ Static analysis was performed with **Cppcheck** with the `--addon=misra` flag.
 
 Violations identified in the full scan originate exclusively from:
 
-- **MathWorks runtime support files** (`rt_nonfinite.c`, `rtGetNaN.c`) — library code outside the scope of the user-authored algorithm.
+- **MathWorks runtime support files** (`rt_nonfinite.c`, `rtGetNaN.c`) — vendor-generated code classified separately; compliance requires documented MISRA deviations or qualification according to project standards.
 - **Simulation harness** (`ert_main.c`) — contains `printf`/`fflush` calls and a blocking `while` loop intended for desktop simulation only, not for deployment.
 
-The production algorithm file `fmcw_range_model.c` isolates all FMCW signal-processing logic and passed MISRA C:2012 static analysis cleanly.
+The generated production algorithm implementation in `fmcw_range_model.c` — comprising the Simulink block code, rate scheduler, and MATLAB Function logic — achieved zero reported MISRA C:2012 violations.
 
 ### Key Algorithm Functions (fmcw_range_model.c)
 
@@ -86,10 +86,22 @@ The production algorithm file `fmcw_range_model.c` isolates all FMCW signal-proc
 
 ## Deployment Notes
 
-- The code targets **ARM Cortex-M** (configurable in Embedded Coder hardware settings).
-- Base sample rate is **5 ns** (200 MHz); subrates at 500 ns and ~10 us are managed internally by `rate_scheduler()`.
-- `ert_main.c` is a **simulation-only harness** and must be replaced with target-specific ISR/timer integration before deployment.
-- MathWorks runtime files (`rt_nonfinite.*`, `rtGetNaN.*`) must be included in the build but are not subject to MISRA compliance for production certification purposes.
+- The deployment target is a **generic ARM Cortex-M configuration**, selected via Embedded Coder hardware settings. ERT target selection alone does not determine the hardware platform.
+- Simulation base step was configured at **5e-9 s (5 ns)**. ECU task scheduling and execution periods would be mapped separately during deployment integration.
+- `ert_main.c` is a **desktop execution harness** illustrating the model lifecycle. It must be replaced by ECU scheduler/RTOS task code before deployment.
+- MathWorks runtime support files (`rt_nonfinite.*`, `rtGetNaN.*`) are classified separately as vendor-generated code. They require documented MISRA deviations or vendor qualification documentation — not blanket exclusion.
+
+---
+
+## Verification Command
+
+The following command was used to run MISRA C:2012 static analysis on the production code file:
+
+```bash
+cppcheck --addon=misra --enable=all --suppress=missingIncludeSystem fmcw_range_model.c
+```
+
+> **Note:** Cppcheck is a static analysis tool and does not constitute a formally qualified MISRA tool. Production-grade MISRA certification would require a qualified tool such as Polyspace, Helix QAC, LDRA, or PC-lint Plus.
 
 ---
 
