@@ -1,0 +1,145 @@
+Original beatframes size:
+        2000           1         129
+
+Beat signal size:
+        2000         129
+
+
+=============== TOP 30 PEAKS ===============
+
+ 1 : Range Bin =   21    Doppler Bin =    0    Magnitude = 0.008103
+ 2 : Range Bin =   22    Doppler Bin =    0    Magnitude = 0.006477
+ 3 : Range Bin =   51    Doppler Bin =  -13    Magnitude = 0.004119
+ 4 : Range Bin =   21    Doppler Bin =   -1    Magnitude = 0.003501
+ 5 : Range Bin =   21    Doppler Bin =    1    Magnitude = 0.003501
+ 6 : Range Bin =   20    Doppler Bin =    0    Magnitude = 0.003373
+ 7 : Range Bin =   22    Doppler Bin =    1    Magnitude = 0.002798
+ 8 : Range Bin =   22    Doppler Bin =   -1    Magnitude = 0.002798
+ 9 : Range Bin =   51    Doppler Bin =  -14    Magnitude = 0.002767
+10 : Range Bin =   36    Doppler Bin =    0    Magnitude = 0.002712
+11 : Range Bin =   52    Doppler Bin =  -13    Magnitude = 0.002709
+12 : Range Bin =   37    Doppler Bin =    0    Magnitude = 0.002140
+13 : Range Bin =   50    Doppler Bin =  -13    Magnitude = 0.001982
+14 : Range Bin =   61    Doppler Bin =    0    Magnitude = 0.001809
+15 : Range Bin =   52    Doppler Bin =  -14    Magnitude = 0.001789
+16 : Range Bin =   81    Doppler Bin =   10    Magnitude = 0.001708
+17 : Range Bin =   20    Doppler Bin =    1    Magnitude = 0.001457
+18 : Range Bin =   20    Doppler Bin =   -1    Magnitude = 0.001457
+19 : Range Bin =   82    Doppler Bin =   10    Magnitude = 0.001452
+20 : Range Bin =   50    Doppler Bin =  -14    Magnitude = 0.001349
+21 : Range Bin =   36    Doppler Bin =   -1    Magnitude = 0.001172
+22 : Range Bin =   36    Doppler Bin =    1    Magnitude = 0.001172
+23 : Range Bin =   71    Doppler Bin =  -13    Magnitude = 0.001133
+24 : Range Bin =   35    Doppler Bin =    0    Magnitude = 0.001099
+25 : Range Bin =   51    Doppler Bin =  -12    Magnitude = 0.001078
+26 : Range Bin =   70    Doppler Bin =  -13    Magnitude = 0.001030
+27 : Range Bin =   37    Doppler Bin =    1    Magnitude = 0.000924
+28 : Range Bin =   37    Doppler Bin =   -1    Magnitude = 0.000924
+29 : Range Bin =   81    Doppler Bin =    9    Magnitude = 0.000818
+30 : Range Bin =   91    Doppler Bin =    0    Magnitude = 0.000804
+
+============= RANGE ESTIMATES =============
+
+ 1 : 20.00 m
+ 2 : 21.00 m
+ 3 : 50.00 m
+ 4 : 20.00 m
+ 5 : 20.00 m
+ 6 : 19.00 m
+ 7 : 21.00 m
+ 8 : 21.00 m
+ 9 : 50.00 m
+10 : 35.00 m
+11 : 51.00 m
+12 : 36.00 m
+13 : 49.00 m
+14 : 60.00 m
+15 : 51.00 m
+16 : 80.00 m
+17 : 19.00 m
+18 : 19.00 m
+19 : 81.00 m
+20 : 49.00 m
+21 : 35.00 m
+22 : 35.00 m
+23 : 70.00 m
+24 : 34.00 m
+25 : 50.00 m
+26 : 69.00 m
+27 : 36.00 m
+28 : 36.00 m
+29 : 80.00 m
+30 : 90.00 m
+>> script
+Original beatframes size:
+        2000           1         129
+
+Beat signal size:
+        2000         129
+
+
+=============== TOP 30 PEAKS ===============
+
+ 1 : Range Bin =   21    Doppler Bin =    0    Magnitude = 0.008103
+ 2 : Range Bin =   22    Doppler Bin =    0    Magnitude = 0.006477
+ 3 : Range Bin =   51    Doppler Bin =  -13    Magnitude = 0.004119
+ 4 : Range Bin =   21    Doppler Bin =   -1    Magnitude = 0.003501
+ 5 : Range Bin =   21    Doppler Bin =    1    Magnitude = 0.003501
+ 6 : Range Bin =   20    Doppler Bin =    0    Magnitude = 0.003373
+ 7 : Range Bin =   22    Doppler Bin =    1    Magnitude = 0.002798
+ 8 : Range Bin =   22    Doppler Bin =   -1    Magnitude = 0.002798
+ 9 : Range Bin =   51    Doppler Bin =  -14    Magnitude = 0.002767
+10 : Range Bin =   36    Doppler Bin =    0    Magnitude = 0.002712
+11 : Range Bin =   52    Doppler Bin =  -13    Magnitude = 0.002709
+12 : Range Bin =   37    Doppler Bin =    0    Magnitude = 0.002140
+13 : Range Bin =   50    Doppler Bin =  -13    Magnitude = 0.001982
+14 : Range Bin =   61    Doppler Bin =    0    Magnitude = 0.001809
+15 : Range Bin =   52    Doppler Bin =  -14    Magnitude = 0.001789
+16 : Range Bin =   81    Doppler Bin =   10    Magnitude = 0.001708
+17 : Range Bin =   20    Doppler Bin =    1    Magnitude = 0.001457
+18 : Range Bin =   20    Doppler Bin =   -1    Magnitude = 0.001457
+19 : Range Bin =   82    Doppler Bin =   10    Magnitude = 0.001452
+20 : Range Bin =   50    Doppler Bin =  -14    Magnitude = 0.001349
+21 : Range Bin =   36    Doppler Bin =   -1    Magnitude = 0.001172
+22 : Range Bin =   36    Doppler Bin =    1    Magnitude = 0.001172
+23 : Range Bin =   71    Doppler Bin =  -13    Magnitude = 0.001133
+24 : Range Bin =   35    Doppler Bin =    0    Magnitude = 0.001099
+25 : Range Bin =   51    Doppler Bin =  -12    Magnitude = 0.001078
+26 : Range Bin =   70    Doppler Bin =  -13    Magnitude = 0.001030
+27 : Range Bin =   37    Doppler Bin =    1    Magnitude = 0.000924
+28 : Range Bin =   37    Doppler Bin =   -1    Magnitude = 0.000924
+29 : Range Bin =   81    Doppler Bin =    9    Magnitude = 0.000818
+30 : Range Bin =   91    Doppler Bin =    0    Magnitude = 0.000804
+
+============= RANGE ESTIMATES =============
+
+ 1 : 20.00 m
+ 2 : 21.00 m
+ 3 : 50.00 m
+ 4 : 20.00 m
+ 5 : 20.00 m
+ 6 : 19.00 m
+ 7 : 21.00 m
+ 8 : 21.00 m
+ 9 : 50.00 m
+10 : 35.00 m
+11 : 51.00 m
+12 : 36.00 m
+13 : 49.00 m
+14 : 60.00 m
+15 : 51.00 m
+16 : 80.00 m
+17 : 19.00 m
+18 : 19.00 m
+19 : 81.00 m
+20 : 49.00 m
+21 : 35.00 m
+22 : 35.00 m
+23 : 70.00 m
+24 : 34.00 m
+25 : 50.00 m
+26 : 69.00 m
+27 : 36.00 m
+28 : 36.00 m
+29 : 80.00 m
+30 : 90.00 m
